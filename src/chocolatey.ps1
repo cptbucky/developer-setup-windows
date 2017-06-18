@@ -12,8 +12,9 @@ cinst -y 7zip
 cinst -y wget
 cinst -y curl
 cinst -y dotnetcore
-cinst -y gitkraken
 cinst -y postman
+cinst -y smartgit
+cinst -y gitextensions
 #faced issues with cmder possibly due to the vm sleeping..
 cinst -y cmder
 cinst -y docker-for-windows
@@ -29,8 +30,8 @@ Install-Module posh-git
 mkdir c:\dev
 
 # get latest atom config
-Remove-Item -Recurse -Force ~\.atom
-git clone https://github.com/cptbucky/config-atom.git .atom
+#Remove-Item -Recurse -Force ~\.atom
+#git clone https://github.com/cptbucky/config-atom.git .atom
 
 # setup task bar with shortcuts
 
