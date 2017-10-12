@@ -1,5 +1,5 @@
 # install lots of apps via chocolatey
-cinst git.install
+cinst -y git.install
 cinst -y googlechrome
 cinst -y atom
 cinst -y 7zip
