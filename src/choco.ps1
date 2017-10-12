@@ -2,7 +2,7 @@
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 # install lots of apps via chocolatey
-cinst git.install
+cinst -y git.install
 cinst -y googlechrome
 cinst -y firefox
 cinst -y nodejs.install
