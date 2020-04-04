@@ -1,28 +1,32 @@
-# install lots of apps via chocolatey
+# browsers
+choco install -y googlechrome
+choco install -y firefox
+
+# source control
 cinst -y git.install
-cinst -y googlechrome
-cinst -y atom
-cinst -y 7zip
-cinst -y postman
-cinst -y smartgit
 cinst -y gitextensions
-#faced issues with cmder possibly due to the vm sleeping..
+
+# editors / ide
+cinst -y vscode
 cinst -y cmder
+
+# dev tools
+cinst -y postman
+choco install -y docker-for-windows
+choco install -y vscode-docker
+
+# system tools
+cinst -y 7zip
 cinst -y ccleaner
-cinst -y sysinternals
-cinst -y microsoft-build-tools
-cinst -y nuget.commandline
+cinst -y sysinternal
 
-Install-Module posh-git
-
-# create dev directory
-mkdir c:\dev
-
-# get latest atom config
-#Remove-Item -Recurse -Force ~\.atom
-#git clone https://github.com/cptbucky/config-atom.git .atom
-
-# setup task bar with shortcuts
+# frameworks
+cinst -y nodejs-lts # Node.js LTS, Recommended for most users
+cinst -y python
+# Refresh path
+refreshenv
+# Update pip
+python -m pip install --upgrade pip
 
 # view hidden files
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hidden /t REG_DWORD /d 1 /f
