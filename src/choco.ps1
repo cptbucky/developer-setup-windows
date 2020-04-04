@@ -1,39 +1,41 @@
-# install chocolatey
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# browsers
+choco install -y googlechrome
+choco install -y firefox
 
-# install lots of apps via chocolatey
+# source control
 cinst -y git.install
-cinst -y googlechrome
-cinst -y firefox
-cinst -y nodejs.install
-cinst -y atom
-cinst -y fiddler4
-cinst -y 7zip
-cinst -y wget
-cinst -y curl
-cinst -y dotnetcore
-cinst -y postman
-cinst -y smartgit
 cinst -y gitextensions
-#faced issues with cmder possibly due to the vm sleeping..
+
+# editors / ide
+cinst -y vscode
 cinst -y cmder
+
+# dev tools
+cinst -y postman
 cinst -y docker-for-windows
-cinst -y dotnetcore-sdk
+cinst -y vscode-docker
+
+# system tools
+cinst -y 7zip
 cinst -y ccleaner
-cinst -y sysinternals
-cinst -y microsoft-build-tools
+cinst -y sysinternal
+
+# node
+cinst -y nodejs-lts # Node.js LTS, Recommended for most users
+
+# python
+cinst -y python
+refreshenv
+python -m pip install --upgrade pip
+
+# netcore
+cinst -y dotnetcore-sdk
 cinst -y nuget.commandline
 
+# ruby
+cinst -y ruby
+
 Install-Module posh-git
-
-# create dev directory
-mkdir c:\dev
-
-# get latest atom config
-#Remove-Item -Recurse -Force ~\.atom
-#git clone https://github.com/cptbucky/config-atom.git .atom
-
-# setup task bar with shortcuts
 
 # view hidden files
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hidden /t REG_DWORD /d 1 /f
