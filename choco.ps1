@@ -16,11 +16,14 @@ choco install -y vscode-gitlens
 choco install -y vscode-docker
 choco install -y cmder
 
+# productivity
+choco install -y evernote
+
 # dev tools
 choco install -y postman
 choco install -y cmder
 
-# docker
+# docker - only available on windows 10 pro or enterprise
 Enable-WindowsOptionalFeature -Online -FeatureName containers -All
 RefreshEnv
 choco install -y docker-for-windows
@@ -32,26 +35,21 @@ choco install -y sysinternals
 
 # node
 choco install -y nodejs-lts # Node.js LTS, Recommended for most users
+choco install -y webstorm
 
 # python
 choco install -y python
 refreshenv
 python -m pip install --upgrade pip
+choco install -y pycharm-community
 
 # netcore
 choco install -y dotnetcore-sdk
 choco install -y nuget.commandline
+choco install -y jetbrains-rider
 
 # ruby
 choco install -y ruby
-
-# nodejs
-choco install -y nodejs
-
-# ides
-choco install -y jetbrains-rider
-choco install -y pycharm-community
-choco install -y webstorm
 
 # remote desktop
 choco install -y royalts
