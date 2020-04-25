@@ -4,6 +4,6 @@ ensure that you are able to run powershell scripts on the machine before startin
 
 Set-ExecutionPolicy AllSigned
 
-run chocolatey.ps1
+run choco.ps1
 
 run git.ps1
